@@ -23,7 +23,9 @@
 			</div>
 		</div>
 		<div class="bulletin-wrapper">
-			
+			<span class="bulletin-title"></span>
+			<span class="bulletin-text">{{seller.bulletin}}</span>
+			<i class="icon-keyboard_arrow_right"></i>
 		</div>
 	</div>
 </template>
@@ -89,12 +91,12 @@
 							bg-image('decrease_1')
 						&.discount
 							bg-image('discount_1')
-						// &.guarantee
-						// 	bg-image('guarantee_1')
-						// &.invoice
-						// 	bg-image('invoice_1')
-						// &.special
-						// 	bg-image('special_1')
+						&.guarantee
+							bg-image('guarantee_1')
+						&.invoice
+							bg-image('invoice_1')
+						&.special
+							bg-image('special_1')
 					.text
 						line-height:12px
 						font-size:10px
@@ -110,7 +112,36 @@
 				text-align:center
 				.count
 					font-size:10px
+					vertical-align:top
 				.icon-keyboard_arrow_right
 					font-size:10px
-						
+					margin-left:4px
+					line-height:24px
+		.bulletin-wrapper
+			position:relative
+			height:28px
+			line-height:28px
+			padding:0 22px 0 12px
+			white-space:nowrap
+			overflow:hidden
+			text-overflow:ellipsis
+			background:rgba(7,17,27,0.2)
+			.bulletin-title
+				display:inline-block
+				vertical-align:top
+				margin-top:8px
+				width:22px
+				height:12px
+				bg-image('bulletin')
+				background-size:22px 12px
+				background-repeat:no-repeat
+			.bulletin-text
+				vertical-align:top
+				margin:0 4px
+				font-size:10px
+			.icon-keyboard_arrow_right
+				position:absolute
+				font-size:10px
+				right:12px
+				top:8px
 </style>
