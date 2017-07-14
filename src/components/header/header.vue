@@ -32,8 +32,8 @@
 		<div v-show="detailShow" class="detail">
 			<div class="detail-wraper clearfix">
 				<div class="detail-main">
-					<h1>{{seller.name}}</h1>
-					<p>{{seller.bulletin}}</p>
+					<h1 class="name">{{seller.name}}</h1>
+					
 				</div>
 			</div>
 			<div class="detail-close">
@@ -196,6 +196,7 @@
 						line-height:16px
 						text-align:center
 						font-size:16px
+						font-weight:700
 			.detail-close
 					position:relative
 					width:32px
