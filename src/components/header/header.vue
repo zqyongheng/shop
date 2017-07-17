@@ -33,7 +33,7 @@
 			<div class="detail-wraper clearfix">
 				<div class="detail-main">
 					<h1 class="name">{{seller.name}}</h1>
-					
+					<div class="star-wrapper"><star :score="3.6" :size="48"></star></div>
 				</div>
 			</div>
 			<div class="detail-close">
@@ -43,6 +43,8 @@
 	</div>
 </template>
 <script>
+	import star from 'components/star/star';
+
 	export default {
 		props: {
 			seller: {
@@ -61,7 +63,10 @@
 		},
 		created() {
 			this.classMap = ['decrease', 'discount', 'guarantee', 'invoice', 'special'];
-		}
+		},
+		components: {
+	    star
+	  }
 	};
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
@@ -197,6 +202,10 @@
 						text-align:center
 						font-size:16px
 						font-weight:700
+					.star-wrapper
+						margin-top:16px
+						padding:2px 0
+						text-align:center
 			.detail-close
 					position:relative
 					width:32px
